@@ -1,0 +1,16 @@
+{% extends 'pag_dinamica.html' %}
+
+{% block title %} Hoop Snake {% endblock %}
+
+{% block content %}
+    <h1>Nossas Postagens</h1>
+
+    {% for post in posts %}
+        <a href="{% url 'abrir_post' post.id %}">Saiba mais</a>
+        <img src="{{post.imagem.url}}" width="150" alt="{{post.titulo}}">
+        <p>{{post.titulo}}</p>
+        <p>{{post.descricao}}</p>
+    {% endfor%}
+
+    <a href="{% url 'criar_postagem' %}">Criar uma postagem</a>
+{% endblock content %}
