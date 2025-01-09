@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Posts(models.Model):
     titulo = models.CharField(max_length=150)
     descricao = models.TextField()

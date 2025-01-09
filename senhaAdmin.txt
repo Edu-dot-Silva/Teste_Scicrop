@@ -1,14 +1,7 @@
 Hoop Snake
 
-fazer aplicação
-personalizar css
-deixar responsivo
-
-
-
 admin:
 eduardo
 eduardo_esilva@hotmail.com
 12345678
 
-Aula 7

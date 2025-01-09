@@ -1,15 +1,15 @@
-{% extends 'pag_dinamica.html' %}
+{% extends 'pag_base.html' %}
 {% load static %}
 {% block title %} {{postagem.titulo}} {% endblock %}
 {% block content %}
 <div class="pagina_noticia">
-<h1>{{postagem.titulo}}</h1>
-<img src="{{postagem.imagem.url}}" alt="{{postagem.titulo}}">
-<p>{{postagem.criado_em}}</p>
-<div class="section_descricao">
+    <h1>{{postagem.titulo}}</h1>
+    <img src="{{postagem.imagem.url}}" alt="{{postagem.titulo}}">
+    <p>{{postagem.criado_em}}</p>
+    <div class="section_descricao">
 
-    <p>{{ postagem.descricao }}</p>
-</div>
+        <p>{{ postagem.descricao }}</p>
+    </div>
 </div>
 <a href="{% url 'editar_postagem' postagem.id %}"><button class="btns_pag btn_edita"></button></a>
 <a href="{% url 'deletar_postagem' postagem.id %}"><button class="btns_pag btn_deleta"></button></a>

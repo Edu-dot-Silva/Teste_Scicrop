@@ -1,20 +1,18 @@
 from django.shortcuts import get_object_or_404, render
 from blog.models import Posts
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+from blog.forms import FormularioPost
+from django.contrib import messages
 
-# Create your views here.
 def lista_posts(request):
     template_name = 'lista_posts.html'
-    posts = Posts.objects.all()
+    posts = Posts.objects.all().order_by('-criado_em')
     context = {
         'posts':posts
     }
     return render (request,template_name,context)
 
-
-from django.urls import reverse
-from django.http import HttpResponseRedirect
-from blog.forms import FormularioPost
-from django.contrib import messages
 
 def criar_postagem(request):
     if request.method == 'POST':
