@@ -11,6 +11,8 @@ o que facilita bastante a implementação de CRUDs em aplicações.
 
 Aqui tem o link do video que gravei falando mais sobre a aplicação:
 
+https://drive.google.com/file/d/1ZAlBfMXNi8JZKtQamXNSPWR0XWKT07aq/view?usp=sharing
+
 
 
 ===== Para rodar o projeto =====
