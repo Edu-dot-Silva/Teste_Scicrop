@@ -5,10 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/css/pagina_dinamica.css' %}">
 </head>
 <body>
-    {% include 'mensagem.html' %}
-    {% block content %}
-    {% endblock %}
+    <header>
+        <div class="logo"></div>
+        <div class="opcoes">
+            <button class="btn_home">Home</button>
+            <button class="btn_times">Times</button>
+            <button class="btn_vivo">Ao vivo</button>
+
+        </div>
+    </header>
+    
+    <main>
+        {% include 'mensagem.html' %}
+        {% block content %}
+        {% endblock %}
+    </main>
+
+        <footer>
+            <p>Projeto técnico desenvolvido para o processo seletivo da SciCrop © 2025</p>
+        </footer>
+        
 </body>
 </html>

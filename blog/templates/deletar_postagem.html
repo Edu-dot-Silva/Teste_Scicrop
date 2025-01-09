@@ -1,0 +1,11 @@
+{% extends 'pag_dinamica.html' %}
+{% load static %}
+{% block title %}Deletar postagem{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p>Tem certeza que deseja deletar essa postagem do nosso blog?</p>
+        <button type="submit">Confirmar</button>
+        <a href="{% url 'abrir_post' postagem.id %}"><button type="button">Voltar</button></a>
+    </form>
+{% endblock content%}

@@ -1,9 +1,10 @@
 {% extends 'pag_dinamica.html' %}
+{% load static %}
 
 {% block title %} Hoop Snake {% endblock %}
 
 {% block content %}
-    <h1>Nossas Postagens</h1>
+    <h1>Ultimas noticias:</h1>
 
     {% for post in posts %}
         <a href="{% url 'abrir_post' post.id %}">Saiba mais</a>
