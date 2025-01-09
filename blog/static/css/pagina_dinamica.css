@@ -16,12 +16,13 @@ body{
     width: 100%;
     height: auto;
     font-family: "DM Serif Text", serif;
-    display: flex;
-    justify-content: center;
+    display: block;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     overflow-x: hidden;
+    text-align: center;
 }
+
 header{
     width: 100%;
     height: 300px;
@@ -98,4 +99,233 @@ body footer{
     align-items: center;
     color: #e2dedd;
     font-family: "Lato", serif;
+}
+
+.titulo_noticia{
+    font-family: "DM Serif Text", serif;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.section_noticias {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+    gap: 20px;
+    margin-top: 12px;
+    padding: 24px;
+    justify-content: center;
+    /* justify-items: center; */
+}
+
+.section_noticias a, 
+.section_noticias img,
+.section_noticias p {
+    margin: 0;
+    text-align: center;
+}
+
+.section_noticias img {
+    width: 85%;
+    border-radius: 10px;
+}
+
+.section_noticias div {
+    border: 1px solid #b3a49d;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn_saiba_mais{
+background-color:#cf4c1b;
+color: #e2dedd;
+font-family: "Lato", serif;
+width: 94px;
+padding: 8px;
+border-radius: 10px;
+border: none;
+outline: none;
+cursor: pointer;
+margin: 8px;
+font-weight: bold;
+}
+
+.btn_criar_postagem{
+    background-color: #cf4c1b;
+    color: #e2dedd;
+    margin: 8px;
+    width: auto;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
+    width: 220px;
+    font-size: 16px;
+    font-family: "Lato", serif;
+
+}
+.btn_criar_postagem:hover{
+    background-image: url(../images/add_postagem.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 36px;
+
+}
+.pagina_noticia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pagina_noticia img{
+    width: 50%;
+    margin: 8px;
+}
+.pagina_noticia p{
+    font-family: "Lato", serif;
+
+}
+.section_descricao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    padding: 12px;
+    font-family: "Lato", serif;
+
+}
+.btns_pag{
+    width: 84px;
+    height: 42px;
+    padding: 12px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px;
+} 
+.btn_edita{
+background-color: #268fbe;
+background-image: url(../images/edit.png);
+}
+.btn_deleta{
+background-color: #cf0638;
+background-image: url(../images/delete.png);
+}
+.pagina_formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.formulario_postagem label{
+    display: block;
+    font-size: 12px;
+    font-family: "Lato", serif;
+    font-size: 16px;
+    margin: 8px;
+    font-weight: bolder;
+}
+.formulario_postagem input,textarea{
+    display: block;
+    font-family: "Lato", serif;
+    width: 100%;
+}
+.formulario_postagem input{
+    background-color: transparent;
+    font-family: "DM Serif Text", serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #846a5e;
+    padding: 2px;
+}
+.formulario_postagem textarea{
+    border-radius: 5px;
+    padding: 8px;
+    height: 500px;
+
+}
+.formulario_postagem input[type="file"]{
+    border: none;
+    outline: none;
+    border-bottom: none;
+    font-family: "Lato", serif;
+
+    
+}
+.btn_postar{
+    width: 120px;
+    background-color:#cf4c1b;
+    margin: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Lato", serif;
+    transition: all ease-in 0.1s;
+    color: white;
+
+}
+.btn_postar:hover{
+    background-image: url(../images/add_postagem.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 26px;
+    
+}
+.pagina_formulario_deleta{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", serif;
+    font-size: 24px;
+}
+.btns_pagina_deleta{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.btn_confirmar{
+    background-color: #0aac1e;
+    background-image: url(../images/confirma.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+
+}
+.btn_voltar{
+    background-color: #cf4c1b;
+    background-image: url(../images/voltar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+}
+
+.messages{
+    font-size: 16px;
+    font-family: "Lato", serif;
+    margin: 6px;
+
 }

@@ -1,11 +1,14 @@
 {% extends 'pag_dinamica.html' %}
 {% load static %}
-{% block title %} Criar Postagem / Editar Postagem {% endblock %}
+{% block title %} Adicionar postagem {% endblock %}
 
 {% block content %}
-    <form method="post" action="{% if request.method == 'POST' %}{% url 'criar_postagem' %}{% endif%}" enctype="multipart/form-data">
+<h1>Formulario para posts no blog:</h1>
+<div class="pagina_formulario">
+    <form class="formulario_postagem" method="post" action="{% if request.method == 'POST' %}{% url 'criar_postagem' %}{% endif%}" enctype="multipart/form-data">
         {% csrf_token %}
         {{ formulario.as_p }}
-        <button type="submit">Criar Postagem</button>
+        <button class="btn_postar" type="submit">Postar</button>
     </form>
+    </div>
 {% endblock  %}

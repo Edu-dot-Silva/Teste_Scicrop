@@ -1,0 +1,130 @@
+/* para texto */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Lato", serif; */
+
+/* para titulo */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+/* font-family: "DM Serif Text", serif; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    background-color: #e2dedd;
+    width: 100%;
+    height: auto;
+    font-family: "DM Serif Text", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 300px;
+    background-color: #cf4c1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header .opcoes{
+    display: flex;
+    flex-direction: row;
+}
+.opcoes button{
+    margin: 8px;
+    padding: 12px;
+}
+header .logo{
+    width: 300px;
+    height: 300px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 8px;
+}
+
+header .opcoes button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    padding: 12px;
+    color: #e2dedd;
+    font-family: "Lato", serif;
+    font-size: 16px;
+    transition: all ease-in-out 0.01s;
+
+}
+header .opcoes button:hover{
+    border-bottom: 1px solid #e2dedd;
+}
+
+header .opcoes .btn_home:hover{
+    background-image: url(../images/home.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 24px;
+}
+header .opcoes .btn_times:hover{
+    background-image: url(../images/times.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 24px;
+}
+header .opcoes .btn_vivo:hover{
+    background-image: url(../images/ao_vivo.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 24px;
+}
+
+body footer{
+    width: 100%;
+    height: 50px;
+    background-color: #846a5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e2dedd;
+    font-family: "Lato", serif;
+}
+
+.section_noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas com larguras iguais */
+    gap: 20px; /* Espaço entre os elementos */
+    margin-top: 20px; /* Espaço superior */
+}
+
+.section_noticias a, 
+.section_noticias img,
+.section_noticias p {
+    margin: 0;
+    text-align: center;
+}
+
+.section_noticias img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+.section_noticias div {
+    border: 1px solid #ccc; /* Adiciona borda ao bloco */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Fundo leve */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+

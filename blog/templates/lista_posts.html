@@ -6,12 +6,18 @@
 {% block content %}
     <h1>Ultimas noticias:</h1>
 
+    <div class="section_noticias">
     {% for post in posts %}
-        <a href="{% url 'abrir_post' post.id %}">Saiba mais</a>
-        <img src="{{post.imagem.url}}" width="150" alt="{{post.titulo}}">
-        <p>{{post.titulo}}</p>
-        <p>{{post.descricao}}</p>
-    {% endfor%}
 
-    <a href="{% url 'criar_postagem' %}">Criar uma postagem</a>
+        <div class="noticia">
+        <img src="{{post.imagem.url}}" width="150" height="325" alt="{{post.titulo}}">
+        <p class="titulo_noticia">{{post.titulo}}</p>
+        <a href="{% url 'abrir_post' post.id %}"><button class="btn_saiba_mais">Saiba mais</button></a>
+
+        <!-- <p>{{post.descricao}}</p> -->
+        </div>
+        {% endfor%}
+    </div>
+
+    <a href="{% url 'criar_postagem' %}"><button class="btn_criar_postagem">Adicionar postagem</button></a>
 {% endblock content %}

@@ -2,10 +2,12 @@
 {% load static %}
 {% block title %}Deletar postagem{% endblock %}
 {% block content %}
-    <form method="post">
+<div class="pagina_formulario_deleta">
+    <form  method="post">
         {% csrf_token %}
         <p>Tem certeza que deseja deletar essa postagem do nosso blog?</p>
-        <button type="submit">Confirmar</button>
-        <a href="{% url 'abrir_post' postagem.id %}"><button type="button">Voltar</button></a>
+        <button class="btns_pagina_deleta btn_confirmar" type="submit"></button>
+        <a href="{% url 'abrir_post' postagem.id %}"><button class="btns_pagina_deleta btn_voltar" type="button"></button></a>
     </form>
+</div>
 {% endblock content%}
